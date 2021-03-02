@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8777646",
+      "name": "social_fb",
+      "font_class": "icon-test",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "8777647",
+      "name": "social_linkedin",
+      "font_class": "icon-test1",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "8777653",
+      "name": "social_youtube",
+      "font_class": "icon-test2",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "8777655",
+      "name": "social_twitter",
+      "font_class": "icon-test3",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    }
+  ]
+}

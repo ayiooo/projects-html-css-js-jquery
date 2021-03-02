@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* 
+  视频作者没有添加外层包裹，而是直接使用的 body。
+  这些属性相当于都是写在 body 上的。
+  并且作者使用的是 min-height
+*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fbe9e7;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+
+  /* 外层盒子 3d 变换 */
+  transform-style: preserve-3d;
+  /*  */
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+}
+.card:hover {
+  transform: translateX(50%);
+}
+
+/* 左边图片部分 */
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* 添加 3d 变换 */
+  transform-style: preserve-3d;
+  transform-origin: left;
+  background: #000;
+  transition: 1s;
+  /* 背面 */
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+}
+.card:hover .imgBox {
+  transform: rotateY(-180deg);
+}
+
+.card .imgBox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 添加 3d 变换 */
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.card .imgBox img:nth-child(2) {
+  transform: rotateY(180deg);
+}
+/* 右边详情区域 */
+.card .details {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* 让 content 位于 .details 的中间位置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details .content {
+  /* 让两个子元素居中对齐 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.details .content h2 {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.details .content h2 span {
+  color: #e21212;
+  font-size: 0.8em;
+}
+
+.details .content .social-icons {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.details .content .social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  /* 添加动画时间，这样视觉上不会 flush 有个小延时 */
+  transition: 0.2s;
+}
+.details .content .social-icons a:hover {
+  background-color: #e21212;
+}
+.details .content .social-icons a .iconfont {
+  font-size: 18px;
+}
