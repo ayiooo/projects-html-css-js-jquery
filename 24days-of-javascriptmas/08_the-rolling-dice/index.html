@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rolling dice</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="dice">
+    <!-- 
+      里面有 9 个点。
+      - 默认展示点数 1.
+      - 摇到 1 ，我们先清除所有div的样式，然后就给 dice 下面的第4个div添加上 .dot 样式 
+      - 摇到 2 ，我们先清除所有div的样式，然后给 dice 下面的第0个和第8个div添加上 .dot 样式 
+    -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="dot"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
